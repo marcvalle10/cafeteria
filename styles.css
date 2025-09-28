@@ -1,0 +1,37 @@
+:root {
+    --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, .35));
+}
+
+.bg-hero {
+    background-image: var(--hero-overlay), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.text-light-50 {
+    color: rgba(255, 255, 255, .7) !important;
+}
+
+@media print {
+    nav,
+    footer,
+    .btn,
+    .navbar {
+        display: none !important;
+    }
+    .bg-hero {
+        background: none !important;
+    }
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: .8em;
+    }
+    body {
+        color: #000;
+    }
+}
